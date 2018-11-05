@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+
+<body>
+
+<h1>Revision</h1>
+<p id="Output"></p>
+<p id="Output2"></p>
+<p id="Output3"></p>
+<p id="Output4"></p>
+<p id="Output5"></p>
+<p id="Output6"></p>
+
+<script>
+let funds = 50;
+
+while(funds > 1 && funds < 100) {
+
+	console.log(funds)
+	funds3 = funds + 2;
+}
+
+//Can be written as 
+while(funds > 1 && funds < 100){
+	console.log(funds)
+	funds = funds + 2;
+	funds = funds - 1
+	;
+}
+
+//Helper Functions
+//returns a random integer in the range [m,n] (inclusive)
+function rand(m, n) {
+	return m + Math.floor((n-m+1)*Math.random());
+}
+
+//Randomly returns a string representing one of the six
+function randFace(){
+	return["crown", "anchor", "heart", "spade", "club", "diamond"]
+		[rand(0,5)];
+}
+
+const bets = { crown: 0, anchor: 0, heart: 0,
+	spade: 0, club: 0, diamond: 0 };
+let totalBet = rand(1, funds);
+if(totalBet === 7) {
+	totalBet = funds;
+	bets.heart = totalBet;
+} else {
+	// distribute total bet
+}
+funds = funds - totalBet;
+
+let remaining = totalBet;
+do {
+	let bet = rand(1, remaining);
+	let face = randFace();
+	bets[face] = bets[face] + bet;
+	remaining = remaining - bet;
+} while(remaining > 0);
+//READ PG70 TO UNDERSTAND METASYNTAX FOR "while", "if..else", "do..while", and "for" statements
+
+</script>
+
+</body>
+</html>

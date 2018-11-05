@@ -1,16 +1,70 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script>
 
-</script>
 </head>
 
 <body>
 
-<h1>A Web Page</h1>
-<p id="demo">A Paragraph</p>
-<button type="button" onclick="myFunction()">Try it</button>
+<h1>Revision</h1>
+<p id="Output"></p>
+<p id="Output2"></p>
+<p id="Output3"></p>
+<p id="Output4"></p>
+<p id="Output5"></p>
+<p id="Output6"></p>
+
+<script>
+let currentTempC = 22;
+const ROOM_TEMP_C =21.5, MAX_TEMP_C =30;
+
+//Study CH3 pg35 "Variable or Constants: Which to Use?"
+//Know what "Identifiers" are (pg35)
+
+const small = Number.EPSILON;
+const bigInt = Number.MAX_SAFE_INTEGER;
+const obj = {};
+obj.color = "yellow";
+obj["not an identifier"] = 3;
+//const SIZE = Symbol();
+//obj[SIZE] = 8;
+
+const sam1 = {
+				name: "Sam",
+				surname: "Matthews",
+				age: 4,
+				};
+				
+
+//Functions 
+sam1.speak = function(){return "Meow!";};
+
+//deleting properties
+delete sam1.surname
+
+//Arrays
+const a1 = [1, 'two', 3, null, [5, 4, "three", 2 , 1]];
+//Index of the last element
+//a1[a1.length - 1]
+a1[3] = 4;
+
+//Dates
+const now = new Date();
+
+//Data Type Conversions
+const numStr = '33.3';
+const num = Number(numStr);
+
+const a = parseInt("16 volts, 10"); //the "volts" is ignored, 16 is parsed in base 10
+const b = parseInt("3a", 16); // 3a is hexadecimal that equals 53
+
+
+
+document.getElementById("Output").innerHTML = "Q1) " + a1;
+document.getElementById("Output2").innerHTML = "Q2) " + obj["color"];
+document.getElementById("Output3").innerHTML = "Q3) " + now;
+
+</script>
 
 </body>
 </html>
