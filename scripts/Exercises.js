@@ -44,7 +44,7 @@ function sign(num1, num2, num3){
 	}else{
 		alert("The sign is +");
 	}
-	
+
 }
 
 //Q3
@@ -62,7 +62,7 @@ function DecSort(num1,num2,num3){
 		}else{
 			return num2, num3, num1;
 		}
-			
+
 	}else if(num3>num1 && num3>num2){
 			if (num1>num2){
 				return num3, num1, num2;
@@ -70,8 +70,8 @@ function DecSort(num1,num2,num3){
 				return num3, num2, num1;
 			}
 		}
-	} 
-	
+	}
+
 //Q5
 let counter = 0;
 
@@ -84,6 +84,20 @@ while (counter <16){
 		counter++;
 	}
 }
+
+
+//Q10
+let x,y,chr;
+for(x=1; x <=6; x++)
+{
+   for (y=1; y < x; y++)
+     {
+    chr=chr+("*");        
+      }
+ console.log(chr);
+ chr='';
+}
+
 
 //Asynchronous Programming
 //Example 1:
@@ -98,5 +112,3 @@ function countdown() {
 countdown();
 
 //Example 2:
-
-

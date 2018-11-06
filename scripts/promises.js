@@ -20,9 +20,9 @@ function createPost(post){
 	return new Promise((resolve, reject) => {
 		setTimeout(() => {
 			posts.push(post);
-			
+
 			const error = false;
-			
+
 			if (!error){
 				resolve();
 			}else{
@@ -40,7 +40,7 @@ function createPost(post){
 //Async / Await
 async function init(){
 	await createPost({title: "Post Five", body: "This is post five"});
-	
+
 	getPosts(); //Waiting for createPos() to complete before calling getPosts();
 }
 init();
